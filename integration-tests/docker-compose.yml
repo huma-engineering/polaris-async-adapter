@@ -95,8 +95,6 @@ services:
     container_name: "dhos-async-adapter"
     build:
       context: ..
-      args:
-        - GEMFURY_DOWNLOAD_KEY
     volumes:
       - app-volume:/app
     environment:

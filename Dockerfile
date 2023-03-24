@@ -1,6 +1,5 @@
 FROM python:3.9-slim-buster
 
-ARG GEMFURY_DOWNLOAD_KEY
 
 WORKDIR /app
 
@@ -11,7 +10,6 @@ RUN apt-get update \
     && useradd -m app \
     && chown -R app:app /app \
     && pip install --upgrade pip poetry \
-    && poetry config http-basic.sensynehealth ${GEMFURY_DOWNLOAD_KEY:?Missing build argument} '' \
     && poetry config virtualenvs.create false \
     && poetry install -v --no-dev
 
