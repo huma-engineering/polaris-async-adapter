@@ -1,6 +1,6 @@
 behave==1.*
 black
-draymed==1.*
+draymed
 environs==4.*
 isort
 kombu==4.6.8
