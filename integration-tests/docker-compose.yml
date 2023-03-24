@@ -152,7 +152,7 @@ services:
 
   dhos-activation-auth-api:
     container_name: "dhos-activation-auth-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-activation-auth-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-activation-auth-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-activation-auth-api
@@ -170,7 +170,7 @@ services:
 
   dhos-audit-api:
     container_name: "dhos-audit-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-audit-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-audit-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-audit-api
@@ -184,7 +184,7 @@ services:
 
   dhos-encounters-api:
     container_name: "dhos-encounters-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-encounters-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-encounters-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-encounters-api
@@ -200,7 +200,7 @@ services:
 
   dhos-locations-api:
     container_name: "dhos-locations-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-locations-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-locations-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-locations-api
@@ -218,7 +218,7 @@ services:
 
   dhos-messages-api:
     container_name: "dhos-messages-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-messages-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-messages-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-messages-api
@@ -234,7 +234,7 @@ services:
 
   dhos-observations-api:
     container_name: "dhos-observations-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-observations-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-observations-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-observations-api
@@ -250,7 +250,7 @@ services:
 
   dhos-questions-api:
     container_name: "dhos-questions-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-questions-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-questions-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-questions-api
@@ -264,7 +264,7 @@ services:
 
   dhos-sms-api:
     container_name: "dhos-sms-api"
-    image: sensynehealth.azurecr.io/dhos/dhos-sms-api:dev
+    image: ghcr.io/huma-engineering/dhos/dhos-sms-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: dhos-sms-api
@@ -283,7 +283,7 @@ services:
 
   gdm-bg-readings-api:
     container_name: "gdm-bg-readings-api"
-    image: sensynehealth.azurecr.io/gdm/gdm-bg-readings-api:dev
+    image: ghcr.io/huma-engineering/gdm/gdm-bg-readings-api:dev
     environment:
       <<: *COMMON_ENVIRONMENT
       DATABASE_NAME: gdm-bg-readings-api
