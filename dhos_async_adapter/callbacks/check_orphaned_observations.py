@@ -19,11 +19,11 @@ def process(body: AnyStr) -> None:
     - Body: A group of actions in the format published by the Connector API service.
     - Notes: Merges encounter in Encounters API if required, then updates message in Connector API.
     - Endpoint(s):
-      - GET /dhos-observations/dhos/v2/observation_set
-      - GET /dhos-encounters/dhos/v1/encounter/<encounter_uuid>
-      - POST /dhos-encounters/dhos/v2/encounter
-      - PATCH /dhos-encounters/dhos/v1/encounter/<encounter_uuid>
-      - PATCH /dhos-connector/dhos/v1/message/<message_uuid>
+      - GET /dhos-observations/gdm/v2/observation_set
+      - GET /dhos-encounters/gdm/v1/encounter/<encounter_uuid>
+      - POST /dhos-encounters/gdm/v2/encounter
+      - PATCH /dhos-encounters/gdm/v1/encounter/<encounter_uuid>
+      - PATCH /dhos-connector/gdm/v1/message/<message_uuid>
 
     Orphaned observation sets can occur if an encounter is marked as cancelled (deleted). In order to retain
     visibility of any observation sets taken against the deleted encounter, a new discharged local encounter

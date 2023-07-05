@@ -30,9 +30,9 @@ def process(body: AnyStr) -> None:
     - Body: A group of actions in the format published by the Connector API service.
     - Notes: Part of the chain that results in an ORU HL7 message. Results in an dhos.DM000005 message being published.
     - Endpoint(s):
-        - GET /dhos-encounters/dhos/v1/encounter/<encounter_uuid>
-        - POST /dhos-encounters/dhos/v2/encounter
-        - PATCH /dhos-encounters/dhos/v1/encounter/<encounter_uuid>
+        - GET /dhos-encounters/gdm/v1/encounter/<encounter_uuid>
+        - POST /dhos-encounters/gdm/v2/encounter
+        - PATCH /dhos-encounters/gdm/v1/encounter/<encounter_uuid>
     """
     logger.info(
         "Received observation set notification message (%s)",

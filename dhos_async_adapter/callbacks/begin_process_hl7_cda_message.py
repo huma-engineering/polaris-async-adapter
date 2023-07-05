@@ -15,7 +15,7 @@ def process(body: AnyStr) -> None:
     - Routing Key: dhos.423779001
     - Body: Message details.
     - Notes: Used for async ACK.
-    - Endpoint(s): POST /dhos-connector/dhos/v1/cda_message
+    - Endpoint(s): POST /dhos-connector/gdm/v1/cda_message
     """
 
     logger.info("Processing HL7 CDA message")

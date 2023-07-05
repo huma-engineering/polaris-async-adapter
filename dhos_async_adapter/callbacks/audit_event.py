@@ -20,7 +20,7 @@ def process(body: AnyStr) -> None:
     - Routing Key: dhos.34837004
     - Body: Details of the audit event.
     - Notes: This is our primary mechanism for recording specific audit events.
-    - Endpoint(s): POST /dhos-audit/dhos/v2/event
+    - Endpoint(s): POST /dhos-audit/gdm/v2/event
     """
     logger.info("Received audit message (%s)", ROUTING_KEY)
 

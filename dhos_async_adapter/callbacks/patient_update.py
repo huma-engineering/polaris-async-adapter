@@ -54,11 +54,11 @@ def process(body: AnyStr) -> None:
     - Body: A group of actions in the format published by the Connector API service.
     - Notes: Creates or updates patients and locations as appropriate, then publishes dhos.305058001 or updates message in Connector API.
     - Endpoint(s):
-        - GET /dhos-services/dhos/v1/patient
-        - POST /dhos-services/dhos/v1/patient
-        - PATCH /dhos-services/dhos/v1/patient/<patient_uuid>
-        - GET /dhos-locations/dhos/v1/location/search
-        - PATCH /dhos-connector/dhos/v1/message/<message_uuid>
+        - GET /dhos-services/gdm/v1/patient
+        - POST /dhos-services/gdm/v1/patient
+        - PATCH /dhos-services/gdm/v1/patient/<patient_uuid>
+        - GET /dhos-locations/gdm/v1/location/search
+        - PATCH /dhos-connector/gdm/v1/message/<message_uuid>
     """
     logger.info("Received process patient message (%s)", ROUTING_KEY)
 

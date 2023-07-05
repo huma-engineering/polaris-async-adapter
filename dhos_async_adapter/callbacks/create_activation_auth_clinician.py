@@ -15,7 +15,7 @@ def process(body: AnyStr) -> None:
     - Routing Key: dhos.D9000001
     - Body: A clinician's details.
     - Notes: Used for creating SEND Entry login credentials.
-    - Endpoint(s): POST /dhos-activation-auth/dhos/v1/clinician
+    - Endpoint(s): POST /dhos-activation-auth/gdm/v1/clinician
     """
     logger.info("Received 'create clinician' message (%s)", ROUTING_KEY)
 

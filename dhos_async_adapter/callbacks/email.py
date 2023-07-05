@@ -29,7 +29,7 @@ def process(body: AnyStr) -> None:
     - Routing Key: dhos.DM000017
     - Body: Details of an email message.
     - Notes: Includes message type and email address.
-    - Endpoint(s): POST /dhos-notifications/dhos/v1/email
+    - Endpoint(s): POST /dhos-notifications/gdm/v1/email
     """
     logger.info("Received 'send email' message (%s)", ROUTING_KEY)
 

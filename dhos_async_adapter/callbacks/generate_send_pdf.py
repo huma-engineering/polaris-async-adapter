@@ -28,13 +28,13 @@ def process(body: AnyStr) -> None:
     - Body: An object containing an encounter ID.
     - Notes: Generates ward report PDFs containing observation statistics
     - Endpoint(s):
-      - GET /dhos-encounters/dhos/v1/encounter/<encounter_uuid>
-      - GET /dhos-encounters/dhos/v1/encounter/<encounter_uuid>/children
-      - GET /dhos-services/dhos/v1/patient/record/<record_uuid>
-      - GET /dhos-locations/dhos/v1/location/<location_uuid>
-      - GET /dhos-observations/dhos/v2/observation_set
-      - POST /dhos-users/dhos/v1/clinician_list
-      - POST /dhos-pdf/dhos/v1/send_pdf
+      - GET /dhos-encounters/gdm/v1/encounter/<encounter_uuid>
+      - GET /dhos-encounters/gdm/v1/encounter/<encounter_uuid>/children
+      - GET /dhos-services/gdm/v1/patient/record/<record_uuid>
+      - GET /dhos-locations/gdm/v1/location/<location_uuid>
+      - GET /dhos-observations/gdm/v2/observation_set
+      - POST /dhos-users/gdm/v1/clinician_list
+      - POST /dhos-pdf/gdm/v1/send_pdf
     """
     logger.info("Received 'aggregate SEND PDF data' message (%s)", ROUTING_KEY)
 

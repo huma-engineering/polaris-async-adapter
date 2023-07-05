@@ -36,8 +36,8 @@ def process(body: AnyStr) -> None:
     - Body: An object containing a patient UUID and alert type
     - Notes: Sends an alert message to each location the patient belongs to. Aborts if patient is not a GDM patient.
     - Endpoint(s):
-      - GET /dhos-services/dhos/v1/patient
-      - POST /dhos-messages/dhos/v1/message
+      - GET /dhos-services/gdm/v1/patient
+      - POST /dhos-messages/gdm/v1/message
     """
     logger.info("Received 'BG reading alert' message (%s)", ROUTING_KEY)
 

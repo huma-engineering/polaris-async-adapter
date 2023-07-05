@@ -47,10 +47,10 @@ def process(body: AnyStr) -> None:
     - Body: A group of actions in the format published by the Connector API service.
     - Notes: Appends patient data to existing encounter/observation data and triggers sending of an ORU message.
     - Endpoint(s):
-        - GET /dhos-services/dhos/v1/patient/record/<record_uuid>
-        - GET /dhos-users/dhos/v1/clinician/<clinician_uuid>
-        - GET /dhos-locations/dhos/v1/location/<location_uuid>
-        - POST /dhos-connector/dhos/v1/oru_message
+        - GET /dhos-services/gdm/v1/patient/record/<record_uuid>
+        - GET /dhos-users/gdm/v1/clinician/<clinician_uuid>
+        - GET /dhos-locations/gdm/v1/location/<location_uuid>
+        - POST /dhos-connector/gdm/v1/oru_message
     """
     logger.info(
         "Received services observation set notification message (%s)",
