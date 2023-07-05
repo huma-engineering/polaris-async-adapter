@@ -7,7 +7,7 @@ from dhos_async_adapter.clients import do_request
 
 
 def get_observation_sets(encounter_uuid: str) -> List[Dict]:
-    url = f"{config.DHOS_OBSERVATIONS_API_URL}/dhos/v2/observation_set?encounter_id={encounter_uuid}"
+    url = f"{config.DHOS_OBSERVATIONS_API_URL}/gdm/v2/observation_set?encounter_id={encounter_uuid}"
     logger.debug(
         "Getting observation sets for encounter %s",
         encounter_uuid,
@@ -18,7 +18,7 @@ def get_observation_sets(encounter_uuid: str) -> List[Dict]:
 
 
 def get_observation_sets_for_encounter_ids(encounter_uuids: List[str]) -> List[Dict]:
-    url = f"{config.DHOS_OBSERVATIONS_API_URL}/dhos/v2/observation_set"
+    url = f"{config.DHOS_OBSERVATIONS_API_URL}/gdm/v2/observation_set"
     logger.debug(
         "Getting observation sets for encounters: %s",
         ", ".join(encounter_uuids),

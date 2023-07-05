@@ -8,7 +8,7 @@ from dhos_async_adapter.clients import do_request
 
 
 def create_message(message_details: Dict) -> None:
-    url = f"{config.DHOS_MESSAGES_API_URL}/dhos/v2/message"
+    url = f"{config.DHOS_MESSAGES_API_URL}/gdm/v2/message"
     logger.debug(
         "Posting message to dhos-messages-api", extra={"message_body": message_details}
     )

@@ -9,7 +9,7 @@ from dhos_async_adapter.helpers.exceptions import RejectMessageError
 
 
 def get_clinician_by_uuid(clinician_uuid: str) -> Optional[Dict]:
-    url = f"{config.DHOS_USERS_API_URL}/dhos/v1/clinician/{clinician_uuid}"
+    url = f"{config.DHOS_USERS_API_URL}/gdm/v1/clinician/{clinician_uuid}"
     logger.debug(
         "GETting clinician with UUID %s",
         clinician_uuid,
@@ -29,7 +29,7 @@ def get_clinician_by_uuid(clinician_uuid: str) -> Optional[Dict]:
 def get_clinicians_by_uuids(
     clinician_uuids: List[str], compact: bool = False
 ) -> Dict[str, Dict]:
-    url = f"{config.DHOS_USERS_API_URL}/dhos/v1/clinician_list"
+    url = f"{config.DHOS_USERS_API_URL}/gdm/v1/clinician_list"
     params = {"compact": compact}
     logger.debug(
         "POST to clinician_list with UUIDs: %s",

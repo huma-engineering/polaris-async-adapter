@@ -9,7 +9,7 @@ from dhos_async_adapter.helpers.exceptions import RejectMessageError
 
 
 def get_patient(patient_uuid: str, product_name: Optional[str]) -> Optional[Dict]:
-    url = f"{config.DHOS_SERVICES_API_URL}/dhos/v1/patient/{patient_uuid}"
+    url = f"{config.DHOS_SERVICES_API_URL}/gdm/v1/patient/{patient_uuid}"
     logger.debug(
         "GETting patient with UUID %s",
         patient_uuid,
@@ -30,7 +30,7 @@ def get_patient(patient_uuid: str, product_name: Optional[str]) -> Optional[Dict
 
 
 def get_patient_by_record_id(record_uuid: str, compact: bool = False) -> Dict:
-    url = f"{config.DHOS_SERVICES_API_URL}/dhos/v1/patient/record/{record_uuid}"
+    url = f"{config.DHOS_SERVICES_API_URL}/gdm/v1/patient/record/{record_uuid}"
     logger.debug(
         "GETting patient with record UUID %s",
         record_uuid,
@@ -50,7 +50,7 @@ def get_patients_by_identifier(
         "identifier_value": identifier_value,
         "product_name": product_name,
     }
-    url = f"{config.DHOS_SERVICES_API_URL}/dhos/v1/patient"
+    url = f"{config.DHOS_SERVICES_API_URL}/gdm/v1/patient"
     logger.debug(
         "GETting patients with identifier %s %s",
         identifier,
@@ -69,7 +69,7 @@ def get_patients_by_identifier(
 
 
 def update_patient(patient_uuid: str, patient_details: Dict) -> Dict:
-    url = f"{config.DHOS_SERVICES_API_URL}/dhos/v1/patient/{patient_uuid}"
+    url = f"{config.DHOS_SERVICES_API_URL}/gdm/v1/patient/{patient_uuid}"
     logger.debug(
         "PATCHing patient with UUID %s",
         patient_uuid,
@@ -82,7 +82,7 @@ def update_patient(patient_uuid: str, patient_details: Dict) -> Dict:
 
 
 def create_patient(patient_details: Dict) -> Dict:
-    url = f"{config.DHOS_SERVICES_API_URL}/dhos/v1/patient"
+    url = f"{config.DHOS_SERVICES_API_URL}/gdm/v1/patient"
     params = {"type": "SEND"}
     logger.debug(
         "POSTing patient to Services API",

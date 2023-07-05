@@ -19,7 +19,7 @@ def merge_encounters_with_parent(encounters: List[Dict], parent_uuid: str) -> No
 
 
 def get_encounter_by_uuid(encounter_uuid: str, show_deleted: bool = False) -> Dict:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v1/encounter/{encounter_uuid}"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v1/encounter/{encounter_uuid}"
     logger.debug(
         "GETting encounter %s",
         encounter_uuid,
@@ -30,7 +30,7 @@ def get_encounter_by_uuid(encounter_uuid: str, show_deleted: bool = False) -> Di
 
 
 def get_open_local_encounters(patient_uuid: str) -> List[Dict]:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v2/encounter"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v2/encounter"
     logger.debug(
         "GETting open encounters for patient %s",
         patient_uuid,
@@ -56,7 +56,7 @@ def get_open_local_encounters(patient_uuid: str) -> List[Dict]:
 
 
 def get_epr_encounters(patient_uuid: str, epr_encounter_id: str) -> List[Dict]:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v2/encounter"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v2/encounter"
     logger.debug(
         "GETting EPR encounters for patient %s",
         patient_uuid,
@@ -75,7 +75,7 @@ def get_epr_encounters(patient_uuid: str, epr_encounter_id: str) -> List[Dict]:
 
 
 def update_encounter_by_uuid(encounter_uuid: str, encounter_data: Dict) -> Dict:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v1/encounter/{encounter_uuid}"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v1/encounter/{encounter_uuid}"
     logger.debug(
         "PATCHing encounter %s",
         encounter_uuid,
@@ -88,7 +88,7 @@ def update_encounter_by_uuid(encounter_uuid: str, encounter_data: Dict) -> Dict:
 
 
 def create_encounter(encounter_data: Dict) -> Dict:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v2/encounter"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v2/encounter"
     logger.debug(
         "POSTing encounter",
         extra={"url": url},
@@ -103,7 +103,7 @@ def merge_patient_encounters(
     parent_patient_uuid: str,
     message_uuid: str,
 ) -> None:
-    url = f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v1/encounter/merge"
+    url = f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v1/encounter/merge"
     logger.debug(
         "POSTing patient encounter merge",
         extra={"url": url},
@@ -119,7 +119,7 @@ def merge_patient_encounters(
 
 def get_child_encounters(encounter_uuid: str, show_deleted: bool = False) -> List[str]:
     url = (
-        f"{config.DHOS_ENCOUNTERS_API_URL}/dhos/v1/encounter/{encounter_uuid}/children"
+        f"{config.DHOS_ENCOUNTERS_API_URL}/gdm/v1/encounter/{encounter_uuid}/children"
     )
     logger.debug(
         "GETting child encounters for encounter %s",

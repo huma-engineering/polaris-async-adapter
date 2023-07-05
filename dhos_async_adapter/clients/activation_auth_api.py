@@ -7,7 +7,7 @@ from dhos_async_adapter.clients import do_request
 
 
 def create_clinician(clinician_details: Dict) -> None:
-    url = f"{config.DHOS_ACTIVATION_AUTH_API_URL}/dhos/v1/clinician"
+    url = f"{config.DHOS_ACTIVATION_AUTH_API_URL}/gdm/v1/clinician"
     logger.debug(
         "Posting activation auth clinician",
         extra={"url": url, "payload": clinician_details},
@@ -16,7 +16,7 @@ def create_clinician(clinician_details: Dict) -> None:
 
 
 def update_clinician(clinician_uuid: str, clinician_details: Dict) -> None:
-    url = f"{config.DHOS_ACTIVATION_AUTH_API_URL}/dhos/v1/clinician/{clinician_uuid}"
+    url = f"{config.DHOS_ACTIVATION_AUTH_API_URL}/gdm/v1/clinician/{clinician_uuid}"
     logger.debug(
         "Patching activation auth clinician",
         extra={"url": url, "payload": clinician_details},

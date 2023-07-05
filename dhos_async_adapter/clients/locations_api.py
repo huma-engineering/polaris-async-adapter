@@ -10,7 +10,7 @@ from dhos_async_adapter.clients import do_request
 def get_locations(
     location_types: Optional[List[str]] = None, compact: bool = True
 ) -> Dict[str, Dict[str, Any]]:
-    url = f"{config.DHOS_LOCATIONS_API_URL}/dhos/v1/location/search"
+    url = f"{config.DHOS_LOCATIONS_API_URL}/gdm/v1/location/search"
     logger.debug(
         "GETting locations",
         extra={"url": url},
@@ -27,7 +27,7 @@ def get_locations(
 
 
 def get_location_by_uuid(location_uuid: str) -> Dict:
-    url = f"{config.DHOS_LOCATIONS_API_URL}/dhos/v1/location/{location_uuid}"
+    url = f"{config.DHOS_LOCATIONS_API_URL}/gdm/v1/location/{location_uuid}"
     logger.debug(
         "GETting location with UUID %s",
         location_uuid,
@@ -41,7 +41,7 @@ def get_locations_by_ods_code(ods_code: str) -> Dict[str, Dict[str, Any]]:
     params = {
         "ods_code": ods_code,
     }
-    url = f"{config.DHOS_LOCATIONS_API_URL}/dhos/v1/location/search"
+    url = f"{config.DHOS_LOCATIONS_API_URL}/gdm/v1/location/search"
     logger.debug(
         "GETting locations with ODS code %s",
         ods_code,
@@ -58,7 +58,7 @@ def get_locations_by_ods_code(ods_code: str) -> Dict[str, Dict[str, Any]]:
 
 
 def create_location(locations_details: Dict) -> Dict:
-    url = f"{config.DHOS_LOCATIONS_API_URL}/dhos/v1/location"
+    url = f"{config.DHOS_LOCATIONS_API_URL}/gdm/v1/location"
     logger.debug(
         "POSTing new location",
         extra={"url": url},
